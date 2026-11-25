@@ -1,0 +1,18 @@
+<div class="container my-5" style="max-width: 320px">
+  <div class="card shadow p-3">
+    <h1 class="h4 text-center text-primary mb-3">Calculadora</h1>
+    <!-- interpolation -->
+    <div class="pantalla mb-3">{{ pantalla }}</div>
+    <div class="botones">
+      @for (digito of digitos; track digito) {
+        <!-- event binding -->
+        <button class="btn btn-light border" [class.cero]="digito === 0" (click)="pulsarDigito(digito)">{{ digito }}</button>
+      }
+      <!-- property binding -->
+      <button class="btn btn-warning" [disabled]="operacion === '+' && nuevoNumero" (click)="pulsarOperacion('+')">+</button>
+      <button class="btn btn-warning" [disabled]="operacion === '-' && nuevoNumero" (click)="pulsarOperacion('-')">-</button>
+      <button class="btn btn-danger" (click)="limpiar()">C</button>
+      <button class="btn btn-primary igual" (click)="pulsarIgual()">=</button>
+    </div>
+  </div>
+</div>

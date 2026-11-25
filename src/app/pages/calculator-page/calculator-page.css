@@ -1,0 +1,4 @@
+.pantalla { background: #222; color: #0f0; font-family: monospace; font-size: 2rem; text-align: right; padding: 0.5rem 1rem; border-radius: 6px; overflow-x: auto; }
+.botones { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.botones .btn { font-size: 1.3rem; padding: 0.8rem 0; }
+.cero { grid-column: span 2; }
